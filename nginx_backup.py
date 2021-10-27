@@ -1,7 +1,7 @@
 import os
 
 SCRIPT_FOLDER = os.getcwd()
-SCRIPT_PATH = SCRIPT_FOLDER + "/nginx_restore.py"
+SCRIPT_PATH = SCRIPT_FOLDER + "/restore.sh" #
 SCRIPT_PERIOD = "*/5 * * * * "
 
 print ("     SELECT:")
@@ -19,7 +19,7 @@ if USER_CHOICE == 1:
 elif USER_CHOICE == 2:
   os.system("sudo rm -R /etc/nginx_backup")
   #os.system("sudo rm /etc/cron.d/nginx_backup")
-  #ADD REMOVAL FOR CRONTAB
+  #SHOULD ADD REMOVAL FOR CRONTAB
   print ("Backup deleted")
 else:
  print("ERROR")
