@@ -1,10 +1,14 @@
-#!/bin/bash
+#! /bin/bash
 
 printf "\n"
 read -p "# of characters: " pass_length
 printf "\n"
 
 
-for i in {1..5}; do (tr -cd '[:alnum:]' < /dev/urandom | fold -w${pass_lenght} | head -n 1); done
+tr -dc A-Za-z0-9 < /dev/urandom | head -c ${1:-32} | xargs
+
 printf "$pass_output\n"
+
+
+
 
